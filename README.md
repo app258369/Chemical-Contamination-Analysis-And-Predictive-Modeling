@@ -28,7 +28,7 @@ I proposed a diagnostic plan using 6 pre-inspected clean wafers:
 * **Dry Run (2 wafers)**: No spray to isolate mechanical handling factors.
 * **Extreme Path (2 wafers)**: A custom recipe simulating the maximum travel path through the tool.
 
-The **supervisor** approved the plan immediately since the tool was scheduled for PM after the current lot. While waiting for the wafers, I taught the engineer how to write the specific test recipes. I insisted on this because **modifying a customer’s validated recipe is strictly prohibited** for vendors.
+The supervisor approved the plan immediately since the tool was scheduled for PM after the current lot. While waiting for the wafers, I taught the engineer how to write the specific test recipes. I insisted on this because **modifying a customer’s validated recipe is strictly prohibited** for vendors.
 
 #### **The Verdict**
 The supervisor assigned the **Highest Priority** for measurement. 30 minutes later, the results were indisputable: **Wet Run particle counts were 100 times the factory limit.** Investigation confirmed contamination in one of the alternating storage tanks.
@@ -72,7 +72,7 @@ This incident inspired me to build the Python model in this repository. Despite 
 * **Dry Run (2 片)**：不噴灑藥液，排除機械因素。
 * **Extreme Path (2 片)**：編寫特別腳本模擬機台內最長路徑。
 
-**主管** 隨即同意測試，因為機台正好跑完這批產品就要進行 PM。在等待空檔，我教導工程師編寫測試 Recipe。我特別堅持由他編寫，因為 **「嚴禁廠商隨意修改客戶 Recipe」** 是行業內絕對不可以觸犯的規矩。
+主管隨即同意測試，因為機台正好跑完這批產品就要進行 PM。在等待空檔，我教導工程師編寫測試 Recipe。我特別堅持由他編寫，因為 **「嚴禁廠商隨意修改客戶 Recipe」** 是行業內絕對不可以觸犯的規矩。
 
 #### **真相大白**
 主管以 **最高優先程度 (Highest Priority)** 將測試片送往量測。三十分鐘後結果出爐：**Wet Run 的 Particle 數量超過廠區標準一百倍。** 調查證實污染源來自廠區兩個交替使用的儲存槽之一，這精確解釋了警報為何時有時無。
