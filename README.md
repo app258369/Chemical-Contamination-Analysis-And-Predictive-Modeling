@@ -81,7 +81,7 @@ This incident inspired me to build the Python model in this repository. Despite 
 
 ### 💡 技術演進：動態 Dummy 與靜態維護的協同建模
 ![Simulation Result](./result.png)
-"The visualization reveals a critical 98.6% blind spot in standard periodic checks. By synchronizing equipment dummy cycles with the facility's supply transitions, we can transform these red 'Risk Zones' into controlled maintenance windows."
+**Note: 10-Day Kaggle Sprint Prototype** This visualization and its underlying model are the results of an intensive 10-day learning journey on Kaggle. It demonstrates my ability to rapidly translate 3 years of Equipment Engineering (EE) field logic into a quantifiable data model, exposing a 98.6% systemic risk gap.
 
 (這張視覺化圖表揭露了標準定期檢查中高達 98.6% 的盲點。透過將機台 Dummy 循環與廠務端供應切換進行同步，我們可以將這些紅色「風險區」轉化為受控的維護視窗。)
 這次事件啟發我建立本專案中的 Python 模型。儘管有定期檢查，污染仍能避過檢測，原因在於傳統「靜態 Dummy」循環無法應對管路中的動態風險。
