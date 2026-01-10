@@ -35,13 +35,26 @@ The supervisor assigned the **Highest Priority** for measurement. 30 minutes lat
 
 ---
 
-### 💡 Technical Evolution: Advanced Dynamic Dummy Modeling
-This incident inspired me to build the Python model in this repository. Despite regular checks, the contamination persisted because of the blind spots in traditional **Static Dummy** cycles.
+### 💡 Technical Evolution: Dynamic $T_{lag}$ Modeling
+This incident inspired the development of the **Dynamic Dummy Model**. Traditional **Static SOPs** fail because they ignore the dynamic fluid physics within long-distance pipelines.
+
+#### **1. Dynamic $T_{lag}$ (Volume-to-Flow Mapping)**
+Instead of a fixed timer, this model uses **Cumulative Volume Integration** to track the "chemical packet" from Source to Nozzle:
+$$\int_{t_{start}}^{t_{arrival}} Q(t) \,dt \geq V_{pipe}$$
+* **Code Implementation**: Utilizing `cumsum()` to map real-time flow rates ($Q$) against the parameterized pipe volume ($V_{pipe}$), ensuring the model adapts to varying tool activities.
+
+#### **2. CSTR Mixing Dynamics**
+To simulate tank changeovers (A/B switching), I implemented **Continuous Stirred-Tank Reactor (CSTR)** logic to predict exponential concentration decay:
+$$\frac{dC}{dt} = \frac{Q(t)}{V_{tank}} \cdot (C_{in} - C_{out})$$
 
 **Key Innovation: Synergizing Static and Dynamic Maintenance**
 * **The Mixing Model**: Simulates contamination risk during chemical tank changeovers within long-distance pipelines.
-* **The "Dynamic Dummy" Concept**: This model does not replace **Static Dummies** (which are essential for nozzle health). Instead, it **complements** them. 
-* **Synergy**: While Static Dummies handle routine maintenance, this model predicts the arrival of high-risk chemical batches. It triggers an additional **"Dynamic Dummy"** sequence only when high-risk mixing is detected, proactively flushing contaminated chemicals before they impact production wafers.
+* **The "Dynamic Dummy" Concept**: This model does not replace **Static Dummies** (Prevents nozzle drying, crystallization, and ensures dispense stability.). Instead, it **complements** them. 
+* **Synergy**: While Static Dummies handle routine hardware maintenance, the Dynamic Dummy acts as a "Quality Interceptor." It triggers a proactive flush only when high-risk mixing is detected, eliminating the 98.6% systemic risk gap identified in the simulation without excessive chemical waste.
+
+
+![Simulation Result](./result.png)
+Note: This 10-day Kaggle sprint prototype demonstrates the ability to translate 3 years of EE field logic into a quantifiable data model.
 
 ---
 
@@ -86,15 +99,22 @@ This incident inspired me to build the Python model in this repository. Despite 
 (這張視覺化圖表揭露了標準定期檢查中高達 98.6% 的盲點。透過將機台 Dummy 循環與廠務端供應切換進行同步，我們可以將這些紅色「風險區」轉化為受控的維護視窗。)
 這次事件啟發我建立本專案中的 Python 模型。儘管有定期檢查，污染仍能避過檢測，原因在於傳統「靜態 Dummy」循環無法應對管路中的動態風險。
 
-**核心創新：靜態與動態維護的相輔相成**
-* **混合模型**：模擬長距離管線在切換藥液儲存槽時的污染風險。
-* **「動態 Dummy」的概念**：本模型**並非為了取代靜態 Dummy (Static Dummy)**。靜態 Dummy 對於噴嘴濕潤與基礎維護至關重要，不可或缺。
-* **協同效應 (Synergy)**：本模型旨在作為靜態維護的**進階補強**。它預測高風險藥液抵達機台的時間點，並引導機台額外執行一次「動態 Dummy」，在污染藥液接觸生產 Wafer 前預先噴出，從而在不變動基礎維護的前提下，大幅降低 Particle 風險。
+#### **核心演算法：動態容積傳輸 (Dynamic $T_{lag}$)**
+1.  **動態延遲運算**：利用流量累積加總計算。藥液抵達噴嘴的時間會隨著即時總流量 ($Q_{total}$) 動態修正。
+2.  **CSTR 濃度動態**：採用**連續攪拌反應槽**邏輯模擬儲存槽切換時的混合行為。
+    $$\frac{dC}{dt} = \frac{Q(t)}{V_{tank}} \cdot (C_{in} - C_{out})$$
+
+#### **核心創新：靜態與動態維護的相輔相成**
+* **靜態 Dummy (Static Dummy)**：靜態 Dummy 是維持噴嘴物理健康的基礎（防止藥液結晶與確保噴灑穩定性）。
+* **動態 Dummy (本模型)**：作為進階補強，預測高風險藥液抵達時間點，引導機台執行精準沖洗，徹底封堵 **98.6% 的隱性風險**。
+
+---
 
 ### 🛠 Tech Stack / 技術棧
-* **Language**: Python (NumPy, Matplotlib)
+* **Language**: Python (NumPy, Pandas, Matplotlib)
 * **Domain**: Semiconductor Process Control, Failure Analysis (RCA)
-* **Methodology**: Design of Experiments (DoE), Predictive Risk Modeling
+* **Methodology**: Dynamic $T_{lag}$ Mapping, CSTR Physics Modeling
+
 ---
 # Copyright (c) 2026 Alex Chen (Chen Yun Hsaing)
 # Licensed under the MIT License.
