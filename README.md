@@ -41,7 +41,8 @@ The supervisor assigned the **Highest Priority** for measurement. 30 minutes lat
 ![Simulation Result](./Predictive_Modeling_result.png)
 
 "This model is built on synthetic data to demonstrate the physical logic (PoC), not based on actual fab production data." 
-
+> **[Co-Creation Note]**
+> This model and its logic were co-created through a collaborative process between the author and AI. For details on how AI was utilized as a thought partner to translate field intuition into Python code, please refer to [AI_Insights.md](./AI_Insights.md).
 
 ---
 
@@ -100,6 +101,12 @@ The supervisor assigned the **Highest Priority** for measurement. 30 minutes lat
 #### **核心創新：靜態與動態維護的相輔相成**
 * **靜態 Dummy (Static Dummy)**：靜態 Dummy 是維持噴嘴物理健康的基礎（防止藥液結晶與確保噴灑穩定性）。
 * **動態 Dummy (本模型)**：作為進階補強，預測高風險藥液抵達時間點，引導機台執行精準沖洗，徹底封堵 **98.6% 的隱性風險**。
+
+
+>
+> **[協作說明]**
+> 本模型及其邏輯是由作者與 AI 共同產出的。關於如何利用 AI 作為思考夥伴，將現場直覺轉化為 Python 程式碼的詳細協作過程，請參閱 [AI_Insights.md](./AI_Insights.md)。
+
 
 ---
 ### 🛠 Tech Stack / 技術棧
