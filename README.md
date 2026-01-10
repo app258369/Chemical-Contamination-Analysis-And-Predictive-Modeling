@@ -102,13 +102,12 @@ The supervisor assigned the **Highest Priority** for measurement. 30 minutes lat
 * **動態 Dummy (本模型)**：作為進階補強，預測高風險藥液抵達時間點，引導機台執行精準沖洗，徹底封堵 **98.6% 的隱性風險**。
 
 ---
-
 ### 🛠 Tech Stack / 技術棧
 * **Language**: Python (NumPy, Pandas, Matplotlib)
 * **Domain**: Semiconductor Process Control, Failure Analysis (RCA)
 * **Methodology**: Dynamic $T_{lag}$ Mapping, CSTR Physics Modeling
-
 ---
-# Copyright (c) 2026 Alex Chen (Chen Yun Hsaing)
-# Licensed under the MIT License.
-# Derived from real-world Failure Analysis Logic (Micron 2017 Incident).
+**Tags:** `#SemiconductorManufacturing` `#PredictiveMaintenance` `#PhysicsInformedML` `#YieldEngineering` `#CSTR` `#FailureAnalysis` `#AICollaboration` `#SmartFab` `#ProcessControl`
+
+> **Copyright (c) 2026 Alex Chen (Chen Yun Hsaing)** > Licensed under the MIT License.  
+> *Derived from real-world Failure Analysis Logic (Micron 2017 Incident).*
