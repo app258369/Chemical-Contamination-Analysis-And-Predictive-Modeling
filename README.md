@@ -38,7 +38,7 @@ The supervisor assigned the **Highest Priority** for measurement. 30 minutes lat
 ### 📊 Performance & Gap Analysis (English / 中文)
 
 **Note: 10-Day Kaggle Sprint Prototype** This visualization demonstrates the transformation from a **98.6% Systemic Risk Exposure** (under Static SOPs) to a **Predictive Shielded System**. By integrating the **Dynamic Dummy** mechanism, our model identifies the high-risk contamination peaks (shown in the shaded regions) and proactively triggers flushes. This effectively closes the safety gap that traditional periodic checks consistently miss.
-![Simulation Result](./result.png)
+![Simulation Result](./Predictive_Modeling_result.png)
 
 "This model is built on synthetic data to demonstrate the physical logic (PoC), not based on actual fab production data." 
 
@@ -84,7 +84,7 @@ The supervisor assigned the **Highest Priority** for measurement. 30 minutes lat
 
 (備註：10 天 Kaggle 衝刺原型) 這張視覺化圖表展示了從 98.6% 系統性風險暴露（傳統靜態 SOP 下）到預測性防禦系統的轉化。透過導入動態 Dummy (Dynamic Dummy) 機制，本模型能精確識別高風險污染峰值（如陰影區域所示）並主動觸發沖洗，從而徹底彌補了傳統定期檢查中長期存在的安全盲點。這份成果證明了我能在 10 天內，將 3 年的設備工程（EE）現場邏輯快速轉化為量化的數據模型。
 
-![Simulation Result](./result.png)
+![Simulation Result](./Predictive_Modeling_result.png)
 
 本模型基於合成數據建立，旨在演示物理邏輯（概念驗證），而非基於實際晶圓廠生產數據。
 
