@@ -11,7 +11,7 @@ This project presents a retrospective analysis of a critical chemical contaminat
 
 ---
 
-### 📖 The Legend: The Micron Contamination Incident
+### 📖 Case Narrative: An Unexpected Discovery
 
 #### **The Unexpected Discovery**
 One afternoon in 2017, while installing a tool at Micron, I was waiting near the wafer tower for a test sample. A Micron engineer suddenly approached and asked if I could help him check an alarm. Since my current task was nearing completion, I agreed.
@@ -35,26 +35,13 @@ The supervisor assigned the **Highest Priority** for measurement. 30 minutes lat
 
 ---
 
-### 💡 Technical Evolution: Dynamic $T_{lag}$ Modeling
-This incident inspired the development of the **Dynamic Dummy Model**. Traditional **Static SOPs** fail because they ignore the dynamic fluid physics within long-distance pipelines.
+### 📊 Performance & Gap Analysis (English / 中文)
 
-#### **1. Dynamic $T_{lag}$ (Volume-to-Flow Mapping)**
-Instead of a fixed timer, this model uses **Cumulative Volume Integration** to track the "chemical packet" from Source to Nozzle:
-$$\int_{t_{start}}^{t_{arrival}} Q(t) \,dt \geq V_{pipe}$$
-* **Code Implementation**: Utilizing `cumsum()` to map real-time flow rates ($Q$) against the parameterized pipe volume ($V_{pipe}$), ensuring the model adapts to varying tool activities.
-
-#### **2. CSTR Mixing Dynamics**
-To simulate tank changeovers (A/B switching), I implemented **Continuous Stirred-Tank Reactor (CSTR)** logic to predict exponential concentration decay:
-$$\frac{dC}{dt} = \frac{Q(t)}{V_{tank}} \cdot (C_{in} - C_{out})$$
-
-**Key Innovation: Synergizing Static and Dynamic Maintenance**
-* **The Mixing Model**: Simulates contamination risk during chemical tank changeovers within long-distance pipelines.
-* **The "Dynamic Dummy" Concept**: This model does not replace **Static Dummies** (Prevents nozzle drying, crystallization, and ensures dispense stability.). Instead, it **complements** them. 
-* **Synergy**: While Static Dummies handle routine hardware maintenance, the Dynamic Dummy acts as a "Quality Interceptor." It triggers a proactive flush only when high-risk mixing is detected, eliminating the 98.6% systemic risk gap identified in the simulation without excessive chemical waste.
-
-
+**Note: 10-Day Kaggle Sprint Prototype** This visualization demonstrates the transformation from a **98.6% Systemic Risk Exposure** (under Static SOPs) to a **Predictive Shielded System**. By integrating the **Dynamic Dummy** mechanism, our model identifies the high-risk contamination peaks (shown in the shaded regions) and proactively triggers flushes. This effectively closes the safety gap that traditional periodic checks consistently miss.
 ![Simulation Result](./result.png)
-Note: This 10-day Kaggle sprint prototype demonstrates the ability to translate 3 years of EE field logic into a quantifiable data model.
+
+"This model is built on synthetic data to demonstrate the physical logic (PoC), not based on actual fab production data." 
+
 
 ---
 
@@ -93,9 +80,15 @@ Note: This 10-day Kaggle sprint prototype demonstrates the ability to translate 
 ---
 
 ### 💡 技術演進：動態 Dummy 與靜態維護的協同建模
-![Simulation Result](./result.png)
-**Note: 10-Day Kaggle Sprint Prototype** This visualization and its underlying model are the results of an intensive 10-day learning journey on Kaggle. It demonstrates my ability to rapidly translate 3 years of Equipment Engineering (EE) field logic into a quantifiable data model, exposing a 98.6% systemic risk gap.
+### 📊 Performance & Gap Analysis (效能與間隙分析)
 
+(備註：10 天 Kaggle 衝刺原型) 這張視覺化圖表展示了從 98.6% 系統性風險暴露（傳統靜態 SOP 下）到預測性防禦系統的轉化。透過導入動態 Dummy (Dynamic Dummy) 機制，本模型能精確識別高風險污染峰值（如陰影區域所示）並主動觸發沖洗，從而徹底彌補了傳統定期檢查中長期存在的安全盲點。這份成果證明了我能在 10 天內，將 3 年的設備工程（EE）現場邏輯快速轉化為量化的數據模型。
+
+![Simulation Result](./result.png)
+
+本模型基於合成數據建立，旨在演示物理邏輯（概念驗證），而非基於實際晶圓廠生產數據。
+
+---
 (這張視覺化圖表揭露了標準定期檢查中高達 98.6% 的盲點。透過將機台 Dummy 循環與廠務端供應切換進行同步，我們可以將這些紅色「風險區」轉化為受控的維護視窗。)
 這次事件啟發我建立本專案中的 Python 模型。儘管有定期檢查，污染仍能避過檢測，原因在於傳統「靜態 Dummy」循環無法應對管路中的動態風險。
 
