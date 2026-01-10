@@ -52,7 +52,7 @@ The supervisor assigned the **Highest Priority** for measurement. 30 minutes lat
 
 ---
 
-### 📖 傳奇故事：美光污染案實錄
+### 📖 實戰紀實：來自於一個偶然的發現
 
 #### **偶然的發現**
 2017 年在美光裝機的一個下午，我一如往常地在 **wafer tower** 附近的取出口等待客戶給我的測試片。一名美光工程師突然詢問我能否幫他看機台報警。想到目前負責的機台已進入尾聲，我便答應了。
