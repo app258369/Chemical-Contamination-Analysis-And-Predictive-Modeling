@@ -1,4 +1,4 @@
-ĵ# Case Study: Chemical Contamination Analysis & Predictive Modeling
+# Case Study: Chemical Contamination Analysis & Predictive Modeling
 **Field Engineering Intuition, Cross-Machine Verification, and Dynamic Simulation**
 
 [English](#english-version) | [中文版](#中文版)
