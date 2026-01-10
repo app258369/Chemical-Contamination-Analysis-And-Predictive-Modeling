@@ -1,4 +1,4 @@
-# Case Study: Chemical Contamination Analysis & Predictive Modeling
+ĵ# Case Study: Chemical Contamination Analysis & Predictive Modeling
 **Field Engineering Intuition, Cross-Machine Verification, and Dynamic Simulation**
 
 [English](#english-version) | [中文版](#中文版)
@@ -90,7 +90,7 @@ The supervisor assigned the **Highest Priority** for measurement. 30 minutes lat
 本模型基於合成數據建立，旨在演示物理邏輯（概念驗證），而非基於實際晶圓廠生產數據。
 
 ---
-(這張視覺化圖表揭露了標準定期檢查中高達 98.6% 的盲點。透過將機台 Dummy 循環與廠務端供應切換進行同步，我們可以將這些紅色「風險區」轉化為受控的維護視窗。)
+
 這次事件啟發我建立本專案中的 Python 模型。儘管有定期檢查，污染仍能避過檢測，原因在於傳統「靜態 Dummy」循環無法應對管路中的動態風險。
 
 #### **核心演算法：動態容積傳輸 (Dynamic $T_{lag}$)**
