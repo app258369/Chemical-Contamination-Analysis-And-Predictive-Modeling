@@ -7,14 +7,14 @@
 
 <a name="english-version"></a>
 ## 📌 Project Overview (English)
-This project presents a retrospective analysis of a critical chemical contamination event at **Micron (2017)** and the subsequent development of a **Python-based predictive model**. By utilizing years of experience in monitoring ultra-pure data baselines from **TSMC**, I identified a systemic contamination issue that had bypassed standard facility checks for three weeks.
+This project presents a retrospective analysis of a critical chemical contamination event at **Micron (2018)** and the subsequent development of a **Python-based predictive model**. By utilizing years of experience in monitoring ultra-pure data baselines from **TSMC**, I identified a systemic contamination issue that had bypassed standard facility checks for three weeks.
 
 ---
 
 ### 📖 Case Narrative: An Unexpected Discovery
 
 #### **The Unexpected Discovery**
-One afternoon in 2017, while installing a tool at Micron, I was waiting near the wafer tower for a test sample. A Micron engineer suddenly approached and asked if I could help him check an alarm. Since my current task was nearing completion, I agreed.
+One afternoon in 2018, while installing a tool at Micron, I was waiting near the wafer tower for a test sample. A Micron engineer suddenly approached and asked if I could help him check an alarm. Since my current task was nearing completion, I agreed.
 
 #### **Observation: 5 Meters from the Wafer Wall**
 The machine was less than five meters from the wafer wall. I pushed my wafer cart over to join the engineer. The TEL ProZ system was showing a **"Yellow Alarm"**. When I asked how long this had been happening, he replied: *"About three weeks. It’s intermittent."* As I monitored the sensor data climbing during the chemical spray, my intuition told me the rate of change was abnormal. 
@@ -48,14 +48,14 @@ The supervisor assigned the **Highest Priority** for measurement. 30 minutes lat
 
 <a name="中文版"></a>
 ## 📌 專案概述 (中文版)
-本專案紀錄了 **2017 年美光 (Micron)** 的一次重大故障排除事件，以及隨後開發的 **Python 預測模型**。憑藉在 **台積電 (TSMC)** 長期觀察純淨數據的直覺，我成功識別出了一場避過廠務端檢測長達三週的系統性污染。
+本專案紀錄了 **2018 年美光 (Micron)** 的一次重大故障排除事件，以及隨後開發的 **Python 預測模型**。憑藉在 **台積電 (TSMC)** 長期觀察純淨數據的直覺，我成功識別出了一場避過廠務端檢測長達三週的系統性污染。
 
 ---
 
 ### 📖 實戰紀實：來自於一個偶然的發現
 
 #### **偶然的發現**
-2017 年在美光裝機的一個下午，我一如往常地在 **wafer tower** 附近的取出口等待客戶給我的測試片。一名美光工程師突然詢問我能否幫他看機台報警。想到目前負責的機台已進入尾聲，我便答應了。
+2018 年在美光裝機的一個下午，我一如往常地在 **wafer tower** 附近的取出口等待客戶給我的測試片。一名美光工程師突然詢問我能否幫他看機台報警。想到目前負責的機台已進入尾聲，我便答應了。
 
 #### **距離 Wafer Wall 五公尺處的觀察**
 故障機台就在離wafer wall不到五公尺處，我推著我的wafer 車跟他一起走過去。查看 TEL ProZ 的 **「黃色警報」** 後，我問這狀況多久了？他回道：*「大概三個禮拜，而且有時候有、有時候沒有。」* 我看著感測器數據隨著藥液噴灑而爬升，直覺告訴我數值攀升的速度異常。
@@ -117,4 +117,4 @@ The supervisor assigned the **Highest Priority** for measurement. 30 minutes lat
 **Tags:** `#SemiconductorManufacturing` `#PredictiveMaintenance` `#PhysicsInformedML` `#YieldEngineering` `#CSTR` `#FailureAnalysis` `#AICollaboration` `#SmartFab` `#ProcessControl`
 
 > **Copyright (c) 2026 Alex Chen (Chen Yun Hsaing)** > Licensed under the MIT License.  
-> *Derived from real-world Failure Analysis Logic (Micron 2017 Incident).*
+> *Derived from real-world Failure Analysis Logic (Micron 2018 Incident).*
